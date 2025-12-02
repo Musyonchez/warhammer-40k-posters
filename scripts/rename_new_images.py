@@ -26,6 +26,28 @@ RENAME_TARGETS = [
     "main_wall/row_2_emperor_forces/sisters_of_silence",
     "main_wall/row_2_emperor_forces/inquisition",
 
+    # Main wall - row 1 primarchs (I, III-X)
+    "main_wall/row_1_primarchs/lion_el_jonson",
+    "main_wall/row_1_primarchs/fulgrim",
+    "main_wall/row_1_primarchs/perturabo",
+    "main_wall/row_1_primarchs/jaghatai_khan",
+    "main_wall/row_1_primarchs/leman_russ",
+    "main_wall/row_1_primarchs/rogal_dorn",
+    "main_wall/row_1_primarchs/konrad_curze",
+    "main_wall/row_1_primarchs/sanguinius",
+    "main_wall/row_1_primarchs/ferrus_manus",
+
+    # Main wall - row 3 primarchs (XII-XX)
+    "main_wall/row_3_primarchs/angron",
+    "main_wall/row_3_primarchs/roboute_guilliman",
+    "main_wall/row_3_primarchs/mortarion",
+    "main_wall/row_3_primarchs/magnus",
+    "main_wall/row_3_primarchs/horus",
+    "main_wall/row_3_primarchs/lorgar",
+    "main_wall/row_3_primarchs/vulkan",
+    "main_wall/row_3_primarchs/corvus_corax",
+    "main_wall/row_3_primarchs/alpharius",
+
     # Main wall - chaos gods
     "main_wall/chaos_gods/tzeentch",
     "main_wall/chaos_gods/khorne",
