@@ -8,7 +8,16 @@ Organized collection of Warhammer 40K artwork for a multi-wall A4 poster display
 ```
 pinterest_wall_prints/
 ├── main_wall/                # 13×3 grid (39 A4 posters)
-│   ├── row_1_primarchs/      # Primarchs I-X (9 legions)
+│   ├── row_1_primarchs/      # Primarchs I, III-X (9 primarchs)
+│   │   ├── lion_el_jonson/       # I - Dark Angels
+│   │   ├── fulgrim/              # III - Emperor's Children
+│   │   ├── perturabo/            # IV - Iron Warriors
+│   │   ├── jaghatai_khan/        # V - White Scars
+│   │   ├── leman_russ/           # VI - Space Wolves
+│   │   ├── rogal_dorn/           # VII - Imperial Fists
+│   │   ├── konrad_curze/         # VIII - Night Lords
+│   │   ├── sanguinius/           # IX - Blood Angels
+│   │   └── ferrus_manus/         # X - Iron Hands
 │   ├── row_2_emperor_forces/ # Emperor & Imperial organizations
 │   │   ├── emperor/
 │   │   ├── constantine_valdor/
@@ -19,16 +28,25 @@ pinterest_wall_prints/
 │   │   ├── tech_priest/
 │   │   ├── grey_knights/
 │   │   ├── emperor_class_titan/
-│   │   └── assassins/        # 4 main temples
-│   ├── row_3_primarchs/      # Primarchs XII-XX (9 legions)
+│   │   └── assassins/            # Culexus, Eversor, Callidus, Vindicare
+│   ├── row_3_primarchs/      # Primarchs XII-XX (9 primarchs)
+│   │   ├── angron/               # XII - World Eaters
+│   │   ├── roboute_guilliman/    # XIII - Ultramarines
+│   │   ├── mortarion/            # XIV - Death Guard
+│   │   ├── magnus/               # XV - Thousand Sons
+│   │   ├── horus/                # XVI - Sons of Horus
+│   │   ├── lorgar/               # XVII - Word Bearers
+│   │   ├── vulkan/               # XVIII - Salamanders
+│   │   ├── corvus_corax/         # XIX - Raven Guard
+│   │   └── alpharius/            # XX - Alpha Legion
 │   ├── chaos_gods/           # Khorne, Tzeentch, Nurgle, Slaanesh
 │   └── xenos/                # Necrons, Eldar, Tyranids, Tau
 ├── wall_1_right/             # 2×4 grid (8 A4 posters)
-│   ├── traitor_primarchs/    # Special art set (6 primarchs)
+│   ├── traitor_primarchs/    # Fulgrim, Angron, Magnus, Mortarion, Lorgar, Perturabo
 │   └── assassins/            # Venenum, Vanus temples
 └── wall_2_left/              # 2×4 grid (8 A4 posters)
     ├── chaos_champions/      # Abaddon, Kharn, Ahriman, Sevatar
-    └── loyalist_champions/   # Sigismund, Tyberos, Logan, Amit
+    └── loyalist_champions/   # Sigismund, Tyberos, Logan Grimnar, Amit
 ```
 
 ### Source Images
@@ -46,15 +64,35 @@ venv/                        # Python virtual environment
 ## 🖨️ Wall Layout
 
 ### Main Wall (13×3 = 39 posters)
-**Row 1 (Top):** Primarchs I-X (spots 1-9), Khorne (10), Necrons (11), Eldar (12), Tzeentch (13)
-**Row 2 (Middle):** Inquisition, Sisters of Battle, Sisters of Silence, Valdor, **Emperor**, Malcador, Tech Priest, Grey Knights, 4 Assassins, Titan
-**Row 3 (Bottom):** Primarchs XII-XX (spots 1-9), Nurgle (10), Tyranids (11), Tau (12), Slaanesh (13)
+
+**Row 1 (Top - Spots 1-13):**
+1-9: Primarchs I, III-X (Lion, Fulgrim, Perturabo, Jaghatai, Russ, Dorn, Curze, Sanguinius, Ferrus)
+10: Khorne | 11: Necrons | 12: Eldar | 13: Tzeentch
+
+**Row 2 (Middle - Spots 1-13):**
+1: Inquisition | 2: Sisters of Battle | 3: Sisters of Silence | 4: Constantin Valdor | 5: **THE EMPEROR** | 6: Malcador | 7: Tech Priest | 8: Grey Knights | 9-12: Four Assassins (Vindicare, Callidus, Eversor, Culexus) | 13: Emperor-class Titan
+
+**Row 3 (Bottom - Spots 1-13):**
+1-9: Primarchs XII-XX (Angron, Guilliman, Mortarion, Magnus, Horus, Lorgar, Vulkan, Corax, Alpharius)
+10: Nurgle | 11: Tyranids | 12: Tau | 13: Slaanesh
 
 ### Wall 1 - Right (2×4 = 8 posters)
-6 Traitor Primarchs (special art set) + 2 Assassin temples
+
+**Traitor Primarchs (Rows 1-3, special art set):**
+Row 1: Fulgrim | Perturabo
+Row 2: Angron | Lorgar
+Row 3: Mortarion | Magnus
+
+**Assassin Temples (Row 4):**
+Row 4: Venenum | Vanus
 
 ### Wall 2 - Left (2×4 = 8 posters)
-4 Chaos Champions vs 4 Loyalist Champions
+
+**Chaos vs Loyalist Champions:**
+Row 1: Abaddon | Sigismund
+Row 2: Tyberos | Khârn
+Row 3: Ahriman | Logan Grimnar
+Row 4: Amit | Sevatar
 
 **Total: 55 A4 posters**
 
@@ -97,9 +135,10 @@ venv/bin/python3 scripts/reorganize_images.py
 
 When adding new primarch images:
 ```bash
-# Add to: space marine legions/{Legion}/primarch/
-venv/bin/python3 scripts/rename_primarchs.py
-venv/bin/python3 scripts/format_primarchs_a4.py
+# Add images to: main_wall/row_1_primarchs/{primarch_name}/ or
+#                main_wall/row_3_primarchs/{primarch_name}/
+venv/bin/python3 scripts/rename_new_images.py
+venv/bin/python3 scripts/format_new_images_a4.py
 ```
 
 ## 📋 Source Collection

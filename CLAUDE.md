@@ -20,9 +20,9 @@ All scripts must be run with the virtual environment Python:
 venv/bin/python3 scripts/format_for_a4_printing.py
 venv/bin/python3 scripts/reorganize_images.py
 
-# Primarchs
-venv/bin/python3 scripts/rename_primarchs.py
-venv/bin/python3 scripts/format_primarchs_a4.py
+# New images (primarchs, emperor forces, champions, etc.)
+venv/bin/python3 scripts/rename_new_images.py
+venv/bin/python3 scripts/format_new_images_a4.py
 ```
 
 **Never** use system Python - always use `venv/bin/python3`.
@@ -33,13 +33,17 @@ venv/bin/python3 scripts/format_primarchs_a4.py
 
 **Wall Layout (organized by position):**
 - `main_wall/` - 13×3 grid organized by rows and themes
-  - `row_1_primarchs/` - Primarchs I-X (copied from legions)
+  - `row_1_primarchs/` - Primarchs I, III-X (9 individual primarch folders)
+    - lion_el_jonson, fulgrim, perturabo, jaghatai_khan, leman_russ, rogal_dorn, konrad_curze, sanguinius, ferrus_manus
   - `row_2_emperor_forces/` - Emperor and Imperial organizations
-  - `row_3_primarchs/` - Primarchs XII-XX (copied from legions)
+    - emperor, constantine_valdor, malcador, sisters_of_battle, sisters_of_silence, inquisition, tech_priest, grey_knights, emperor_class_titan
+    - assassins/ (culexus, eversor, callidus, vindicare)
+  - `row_3_primarchs/` - Primarchs XII-XX (9 individual primarch folders)
+    - angron, roboute_guilliman, mortarion, magnus, horus, lorgar, vulkan, corvus_corax, alpharius
   - `chaos_gods/` - Khorne, Tzeentch, Nurgle, Slaanesh
   - `xenos/` - Necrons, Eldar, Tyranids, Tau
-- `wall_1_right/` - Traitor primarchs (special art set) + assassins
-- `wall_2_left/` - Chaos champions vs Loyalist champions
+- `wall_1_right/` - Traitor primarchs (special art set: fulgrim, angron, magnus, mortarion, lorgar, perturabo) + assassins (venenum, vanus)
+- `wall_2_left/` - Chaos champions (sevatar, abaddon, ahriman, kharn) vs Loyalist champions (amit, logan_grimnar, tyberos, sigismund)
 
 **Source Images (original legion collection):**
 - `space marine legions/{Legion}/primarch/` - Primarch originals + A4 formatted
@@ -75,10 +79,11 @@ Both pipelines are idempotent and safe to re-run.
 ## Important Notes
 
 **Wall Layout:**
-- Total: 55 A4 posters across 3 walls (39 + 8 + 8)
+- Total: 55 A4 posters capacity across 3 walls (39 + 8 + 8)
 - Main wall: Emperor centered at position 5 with Imperial forces flanking
 - Chaos Gods at corners (spots 10 & 13) of rows 1 & 3
-- Primarchs copied to organized folders but originals preserved in `space marine legions/`
+- Primarchs: Individual folders by primarch name (18 folders, currently empty - awaiting new image set)
+- Current status: 37 posters completed with A4 versions, 18 primarch folders empty
 
 **Source Collection:**
 - 18 Space Marine legions with primarchs
