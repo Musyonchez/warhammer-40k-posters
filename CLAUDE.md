@@ -60,7 +60,10 @@ venv/bin/python3 scripts/format_new_images_a4.py
 1. **rename_primarchs.py** - Standardizes to `{Legion}_primarch.{ext}`
 2. **format_primarchs_a4.py** - Resizes to A4, saves as `*_A4.jpeg` in same folder
 
-Both pipelines are idempotent and safe to re-run.
+**Individual Images (for replacements):**
+1. **format_three_images_a4.py** - Processes specific images (Sanguinius, Emperor, Ahriman) to A4 format
+
+All pipelines are idempotent and safe to re-run.
 
 ### Key Technical Details
 
@@ -82,11 +85,16 @@ Both pipelines are idempotent and safe to re-run.
 - Total: 55 A4 posters capacity across 3 walls (39 + 8 + 8)
 - Main wall: Emperor centered at position 5 with Imperial forces flanking
 - Chaos Gods at corners (spots 10 & 13) of rows 1 & 3
-- Primarchs: Individual folders by primarch name (18 folders, currently empty - awaiting new image set)
-- Current status: 37 posters completed with A4 versions, 18 primarch folders empty
+- Primarchs: Individual folders by primarch name (18 folders populated with originals + A4 versions)
+- Current status: All 55 wall positions complete with A4 print-ready versions
 
 **Source Collection:**
 - 18 Space Marine legions with primarchs
 - Legionnaire subfolders: only `1` and `4` are processed by scripts (hardcoded)
 - Print-ready files have `_A4` suffix
 - All scripts work on `space marine legions/` structure, not wall layout folders
+
+**Hold Folder:**
+- `hold/` contains A4 versions ready for printing or reprinting
+- Used for batch print jobs or quality replacements
+- Copy A4 files here when preparing print batches

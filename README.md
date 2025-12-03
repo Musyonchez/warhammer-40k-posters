@@ -57,6 +57,7 @@ space marine legions/         # Original legion collection
 │   │   ├── 1/               # Legionnaire pose 1 (original + A4)
 │   │   └── 4/               # Legionnaire pose 4 (original + A4)
 │   └── primarch/            # Legion primarch (original + A4)
+hold/                        # A4 images ready for printing/reprinting
 scripts/                     # A4 processing scripts
 venv/                        # Python virtual environment
 ```
@@ -119,8 +120,11 @@ venv/bin/python3 scripts/format_primarchs_a4.py
 ```
 Renames to clean pattern and formats for A4 printing.
 
-### Emperor
-Already processed - see `emperor/` folder.
+### Individual Image Processing
+```bash
+venv/bin/python3 scripts/format_three_images_a4.py
+```
+For processing specific replacement images (Sanguinius, Emperor, Ahriman).
 
 **Result:** All folders contain both original and `*_A4.jpeg` print-ready versions.
 
@@ -140,6 +144,17 @@ When adding new primarch images:
 venv/bin/python3 scripts/rename_new_images.py
 venv/bin/python3 scripts/format_new_images_a4.py
 ```
+
+When replacing existing images (better quality):
+```bash
+# 1. Replace original image in its wall folder
+# 2. Rename to proper convention (e.g., Sanguinius.jpeg, Emperor.jpeg)
+# 3. Create A4 version using appropriate script
+# 4. Copy A4 version to hold/ folder for reprinting
+```
+
+### Hold Folder
+The `hold/` folder contains A4 versions that need to be printed or reprinted. Copy completed A4 images here when ready for print jobs.
 
 ## 📋 Source Collection
 
